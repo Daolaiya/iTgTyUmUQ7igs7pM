@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dataset
+# The full MonReader dataset is hundreds of MB and is not suitable for git.
+# Users download it from the Google Drive link in README.md and extract it
+# into ./images/. The small sample frames (whitelisted below) are kept in
+# the repo so the notebook can be inspected without first downloading.
+#
+# images_ignore/ is a convention for any local-only staging copies of the
+# data (full dataset backups, zips, etc.) and is always ignored.
+images_ignore/
+images/training/**
+images/testing/**
+!images/training/flip/
+!images/training/notflip/
+!images/testing/flip/
+!images/testing/notflip/
+!images/training/flip/.gitkeep
+!images/training/notflip/.gitkeep
+!images/testing/flip/.gitkeep
+!images/testing/notflip/.gitkeep
+# Explicit whitelist of the 10 sample frames committed with the repo.
+!images/training/flip/0001_000000020.jpg
+!images/training/flip/0002_000000012.jpg
+!images/training/flip/0002_000000013.jpg
+!images/training/flip/0002_000000015.jpg
+!images/training/flip/0002_000000017.jpg
+!images/training/notflip/0001_000000002.jpg
+!images/training/notflip/0001_000000004.jpg
+!images/training/notflip/0001_000000009.jpg
+!images/training/notflip/0001_000000014.jpg
+!images/training/notflip/0001_000000024.jpg
+!images/testing/flip/0001_000000020.jpg
+!images/testing/flip/0002_000000012.jpg
+!images/testing/flip/0002_000000013.jpg
+!images/testing/flip/0002_000000015.jpg
+!images/testing/flip/0002_000000017.jpg
+!images/testing/notflip/0001_000000002.jpg
+!images/testing/notflip/0001_000000004.jpg
+!images/testing/notflip/0001_000000009.jpg
+!images/testing/notflip/0001_000000014.jpg
+!images/testing/notflip/0001_000000024.jpg
+
+# Model artifacts produced during training. Only the small
+# mobilenet_model.weights.h5 (~17 MB) is kept in the repo; the other two
+# are regenerated locally by re-running the notebook. ResNet's file is
+# over GitHub's 100 MB hard limit, so it MUST stay ignored.
+models/custom_model.h5
+models/custom_model.keras
+models/resnet_model.weights.h5

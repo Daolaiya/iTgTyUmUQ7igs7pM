@@ -1,0 +1,17 @@
+# Core scientific stack
+numpy>=1.26,<3.0
+pandas>=2.0,<3.0
+matplotlib>=3.7
+seaborn>=0.13
+scikit-learn>=1.3
+
+# Deep learning
+# The notebook works on Keras 2.x (TF 2.10-2.15) and Keras 3 (TF >= 2.16);
+# 2.16+ is recommended because Keras 3 is the default in modern installs and
+# is what the notebook was last verified against. Under Keras 3,
+# `save_weights` requires the ".weights.h5" suffix, which the notebook uses.
+tensorflow>=2.16,<2.22
+
+# Jupyter runtime for the notebook in ./notebooks
+jupyter>=1.0
+ipykernel>=6.0
